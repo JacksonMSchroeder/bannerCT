@@ -1,23 +1,23 @@
-/* Reset básico para impressão */
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
     background: #eee; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    /* Propriedade padrão para compatibilidade */
+   
     print-color-adjust: exact; 
-    /* Versão para navegadores baseados em Webkit (Chrome, Edge, Safari) */
+    
     -webkit-print-color-adjust: exact; 
 }
 
-/* Estrutura do Banner 80cm x 120cm */
+
 .banner { 
     width: 800px; height: 1200px; background: white; 
     margin: 20px auto; border: 5px solid #000; display: flex; flex-direction: column;
     box-shadow: 0 0 20px rgba(0,0,0,0.5); overflow: hidden;
 }
 
-/* Cabeçalho */
+
 header { 
     background: #FFDE00; color: #000; padding: 30px 40px;
     border-bottom: 5px solid #000;
@@ -32,11 +32,11 @@ header {
 .thanks-logo { max-height: 80px; width: auto; margin-bottom: 8px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.2); }
 .thanks-text { font-size: 12px; color: #555; max-width: 250px; line-height: 1.3; }
 
-/* Área Principal - Layout de Coluna Única para Texto + QR */
+
 main { flex-grow: 1; padding: 40px; display: flex; justify-content: center; align-items: stretch; }
 .content-container { display: flex; width: 100%; gap: 40px; }
 
-/* Coluna da Esquerda - Informações */
+
 .left-column { flex: 1.5; display: flex; flex-direction: column; gap: 20px; }
 .info-box { background: #fff; padding: 25px; border-radius: 15px; border: 2px solid #ddd; }
 .info-box h3 { color: #000; margin-bottom: 12px; font-size: 24px; border-bottom: 3px solid #FFDE00; display: inline-block; padding-bottom: 5px; }
@@ -49,7 +49,7 @@ main { flex-grow: 1; padding: 40px; display: flex; justify-content: center; alig
 .myth-item { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #ccc; }
 .myth-item:last-child { border: none; margin-bottom: 0; padding-bottom: 0; }
 
-/* Coluna da Direita - QR Code Grande */
+
 .right-column { flex: 1; display: flex; justify-content: center; align-items: center; }
 .qr-container { 
     background: #FFDE00; color: #000; padding: 40px; border-radius: 20px; 
@@ -63,27 +63,26 @@ main { flex-grow: 1; padding: 40px; display: flex; justify-content: center; alig
 }
 .url-hint { font-size: 16px; margin-top: 20px; font-family: monospace; }
 
-/* Rodapé */
-/* --- Novo Rodapé --- */
+
 footer {
-    background: #000; /* Fundo preto para fechar o banner */
+    background: #000; 
     color: #fff;
-    padding: 30px 40px; /* Mais preenchimento para um rodapé de 1,20m */
-    border-top: 10px solid #FFDE00; /* Detalhe amarelo marcante na transição */
-    width: 100%; /* Garante que o rodapé ocupa toda a largura */
+    padding: 30px 40px; 
+    border-top: 10px solid #FFDE00; 
+    width: 100%; 
 }
 
 .footer-container {
     display: flex;
-    flex-direction: column; /* Organiza textos acima e logos abaixo */
-    gap: 30px; /* Espaço entre os blocos de texto e as logos */
-    max-width: 100%; /* Ocupa todo o espaço inferior */
+    flex-direction: column; 
+    gap: 30px; 
+    max-width: 100%; 
 }
 
-/* Área de Textos */
+
 .footer-texts {
     display: flex;
-    justify-content: space-between; /* Espalha as informações */
+    justify-content: space-between; 
     gap: 20px;
     width: 100%;
 }
@@ -102,7 +101,7 @@ footer {
     padding: 30px 40px;
     border-top: 10px solid #FFDE00;
     width: 100%;
-    margin-top: auto; /* Garante que o footer fique no final */
+    margin-top: auto; 
 }
 
 .footer-texts h3 {
@@ -122,12 +121,12 @@ footer {
     color: #FFDE00; 
 }
 
-/* Área de Logos Horizontal */
+
 .footer-logos-row {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Alinha verticalmente */
-    gap: 120px; /* Amplo espaço entre as logos no banner grande */
+    justify-content: center; 
+    align-items: center; 
+    gap: 120px; 
     width: 100%;
     margin-top: -25px;
 }
@@ -136,29 +135,29 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px; /* Espaço uniforme entre logo e legenda */
+    gap: 12px; 
 }
 
-/* Estilo padronizado para as logos não ficarem gigantes */
+
 .footer-logo {
-    max-height: 70px; /* Reduzi um pouco a altura máxima */
+    max-height: 70px; 
     width: auto;
-    object-fit: contain; /* Garante que a logo não distorça */
-    border: 2px solid #FFDE00; /* Borda amarela em ambas */
-    background: #fff; /* Fundo branco em ambas para visibilidade total */
-    padding: 8px; /* Preenchimento generoso */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 0 15px rgba(255, 222, 0, 0.4); /* Brilho amarelo sutil */
+    object-fit: contain; 
+    border: 2px solid #FFDE00; 
+    background: #fff; 
+    padding: 8px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 15px rgba(255, 222, 0, 0.4); 
 }
 
-/* Logo da Budié: Garantindo que ela não exploda e mantenha o formato circular */
+
 .budie-logo {
-    max-height: 70px; /* Altura idêntica à da UNIASSELVI */
-    border-radius: 50%; /* Mantém o formato circular da logo original */
-    padding: 4px; /* Menos preenchimento para a logo circular */
+    max-height: 70px; 
+    border-radius: 50%; 
+    padding: 4px; 
 }
 
-/* Legenda abaixo das logos */
+
 .logo-group span {
     font-size: 11px;
     text-transform: uppercase;
